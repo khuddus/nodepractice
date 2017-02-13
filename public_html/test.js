@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser  = require('body-parser'); //1
 var app = express();
+app.use(express.static('khuddus_files'));
 app.use(bodyParser.urlencoded({ extended: false }));//2
 app.use(bodyParser.json());//3
 
