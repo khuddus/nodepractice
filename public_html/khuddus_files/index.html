@@ -45,10 +45,10 @@
          }]);
          
          mainApp.controller('AddStudentController', function($scope, $http) {
-             $scope.request_trail_data={"name":"Abdul Khuddus"};
-             $http.post('/', $scope.request_trail_data).then(function successCallback(response) {
-                $scope.status = response.data;
-                 $scope.message = "This page will be used to display add student form"+JSON.stringify($scope.status);
+             $scope.input_data={"name":"Abdul Khuddus"};
+             $http.post('/', $scope.input_data).then(function successCallback(response) {
+                $scope.server_output= response.data;
+                 $scope.message = "This page will be used to display add student form "+JSON.stringify($scope.server_output);
    
             }), function errorCallback(response) {
                 $window.alert("Some Error Have Occured Please Re-login");
